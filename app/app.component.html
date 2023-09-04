@@ -1,0 +1,16 @@
+<div class="form-wrapper">
+  <ng-container [formGroup]="formDetails">
+    <!--Form 1 container -->
+    <app-form1 [formGroupName]="form1"></app-form1>
+    <!-- /Form 1  container -->
+    <br />
+    <br />
+    <!-- Form 2 container -->
+    <app-form2 [formGroupName]="form2"></app-form2>
+    <!-- /Form 2 container -->
+  </ng-container>
+
+  <pre style="margin-top:50px; border: 1px solid red; width: fit-content">
+    {{ formDetails.value | json }}
+  </pre>
+</div>
